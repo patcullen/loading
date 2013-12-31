@@ -1,0 +1,5 @@
+window.loading = (function(){
+
+[[@code]]
+
+})()();

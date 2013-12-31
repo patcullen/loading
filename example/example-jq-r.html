@@ -1,0 +1,24 @@
+<html><head>
+	<script src="require.js"></script>
+<script>
+(function(){
+	require(['jquery', 'loading-jq-office-r-min'], function($, loading) {
+		$('#btnRequest').click(function() {
+			var anim = loading.start($('#btnRequest'));
+			fakeXHR('goesNowhere.php', function(result) {
+				$('#txtResult').val(result);
+				anim.stop();
+			});
+		})
+	});
+	function fakeXHR(url, callback) {
+		setTimeout(function(){callback('This is some pseudo XHR content. Random number: '+Math.random());}, Math.random()*1000+500);
+	}
+})();
+</script>
+</head>
+<body>
+	<button id="btnRequest">XHR Request</button> <br />
+	<textarea id="txtResult" cols="35" rows="3"></textarea>
+</body>
+</html>

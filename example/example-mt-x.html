@@ -1,0 +1,22 @@
+<html><head>
+	<script src="mootools.js"></script>
+	<script src="loading-mt-office-x-min.js"></script>
+<script>
+window.addEvent('domready', function(){
+	$('btnRequest').addEvent('click', function() {
+		var anim = loading.start($('btnRequest'));
+		fakeXHR('goesNowhere.php', function(result) {
+			$('txtResult').set('text', result);
+			anim.stop();
+		});
+	})
+	function fakeXHR(url, callback) {
+		setTimeout(function(){callback('This is some pseudo XHR content. Random number: '+Math.random());}, Math.random()*1000+500);
+	}
+});
+</script>
+</head>
+<body>
+	<button id="btnRequest">XHR Request</button> <br />
+	<textarea id="txtResult" cols="35" rows="3"></textarea>
+</body></html>

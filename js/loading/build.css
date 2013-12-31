@@ -1,0 +1,93 @@
+.loading.build {
+	font: 14px/1 "helvetica neue", helvetica, arial, sans-serif;
+	text-align: center;
+}
+.loading.build .optionPane {
+	margin: 1em 0em 0em;
+}
+.loading.build .optionPane>div {
+	display: block;
+	margin: 0em 0.5em 0em;
+	font-size: 1.1em;
+	line-height: 1.2em;
+	border-bottom: 1px solid #ccc;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.loading.build .optionPane label {
+	display: inline-block; 
+	width: 7em;
+	margin: 0.4em 0.5em;
+}
+.loading.build .optionPane input[type=radio] {
+	display: none; opacity: 0;
+	z-index: 9999;
+}
+/* Original Button CSS Style from http://hellohappy.org/css3-buttons/ */
+.loading.build .optionPane label span {
+	display: block;
+	background: #e8e8e8;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+	box-shadow: inset 0 0 1px 1px #f6f6f6;
+	color: #333;
+	padding: 1.1em 0 1.2em;
+	text-shadow: 0 1px 0 #fff;
+}
+.loading.build .optionPane label span:hover {
+	background: #e5e5e5;
+	-webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+	box-shadow: inset 0 0 1px 1px #eaeaea;
+	color: #222;
+	cursor: pointer;
+}
+.loading.build .optionPane label span:active {
+	background: #e2e2e2;
+	-webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+	box-shadow: inset 0 0 1px 1px #e3e3e3;
+	color: #000;
+}
+
+.loading.build .optionPane label input[type=radio]:checked + span {
+	background: #e3e8e3;
+	font-weight: bold;
+	border: 1px solid #7c7;
+	box-shadow: 0px 0px 2px #9e9;
+}
+
+.loading.build a {
+	display: inline-block;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+	box-shadow: inset 0 0 1px 1px #f6f6f6;
+	text-decoration: none;
+	margin: 1em;
+	width: 195px;
+	background: #81bc2e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtBAMAAADINP+pAAAAGFBMVEWAuy708/To6OhaWlpERERsnyWOnnm5w6tCPsqUAAABk0lEQVR4XoWTwYrbQBBEN4HJvWrBOncnTs5mBvIBMrtXExj5rMVOznbs+PfT040kbzawhdDhdfVUCTEP7yvV3X9orTXVN5NUf51V9Xas/7hfoCbwWl9jaojXu5C0p07iceGDqNrjL1nNC+nF0Let6ZmqmBcGNX3ZNp3uFtIPw3JwPuqykE4L3zTLOhYGvvZrt5uPCd67X1HjmOANF/fL1bkGN9x7LiNg4Ox3TqU33U+8mEZlBC/c7H2xXFLYuNcJfy4jzeKFUnAcmr2MgChxNP6xUSD8xiHq3CrI75xLn0Mnhv+D8bLdtjpGLZoaPMrn8LdoGPc+8ujlYyAkUuNUpZXPoWeIcPouuUy4tFjnQ+PddP4TINI1XkVFccihDQmsdvNv/NwHF4jI2rAVJZUskQpGzQim4BKpEHidKUC63lNFBKvgaaTJkzcggOtDaA8q8WgLQhDWMlRPbZ05fwcEWE887RvHxVPRLTejjiDRPQEE7i/GIDCdYfoa9lCKwYKXgZv5p765qJ9ut59pxouqySLf0V83/IYJZ5x/+AAAAABJRU5ErkJggg==) no-repeat 10px 9px;
+	padding: 9px 0;
+}
+.loading.build a div {
+	text-align: left;
+	padding: 0 0 0 65px;
+	color: #fff;
+	text-shadow: 1px 1px 2px #333;
+	font-size: 1.7em;
+	height: 48px;
+	line-height: 48px;
+}
+.loading.build a span {
+	display: inline-block;
+	font-size: 11px;
+	font-family: monospace;
+	color: #b1fc6e;
+}
+.loading.build a.disabled {
+	opacity: 0.4;
+	cursor: default;
+}
