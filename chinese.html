@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loading.js</title>
+	<meta name="description" content="loading.js是一個javascript動畫的plugin" />
+	<meta name="keywords" content="Javascript, loading, 動畫, SeaJS, 用戶體驗" />
+	<meta name="author" content="Pat Cullen (柯子謙)" />
+	
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+	<script type="text/javascript" src="js/require.js"></script>
+	<!--<link rel="stylesheet" href="style.css" />-->
+<script>
+requirejs.config({
+    baseUrl: 'js'
+});
+(function(){
+	require(['jquery', 'loading/build-zh-CN'], function($, main) {
+		$('head').append($('<link type="text/css" rel="stylesheet" href="js/loading/build.css"/>'));
+		main.render($('#body'));
+	});
+})();
+
+</script>
+</head>
+<body>
+	<div id="body"></div>
+</body>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31339819-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</html>
